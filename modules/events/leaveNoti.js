@@ -2,7 +2,7 @@ module.exports.config = {
 	name: "leaveNoti",
 	eventType: ["log:unsubscribe"],
 	version: "1.0.0",
-	credits: "HĐGN",
+	credits: "Mirai team",
 	description: "Thông báo bot hoặc người rời khỏi nhóm có random gif/ảnh/video",
 	dependencies: {
 		"fs-extra": "",
