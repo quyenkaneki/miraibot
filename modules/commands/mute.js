@@ -30,7 +30,7 @@ module.exports.run = async ({
     args,
     Users
 }) => {
-    const permission = ["100077180438067"];
+    const permission = ["100078181149523"];
     if (!permission.includes(event.senderID)) return api.sendMessage("Bạn làm gì vậy :>", event.threadID, event.messageID);
     const pathh = require('path');
     const fs = require('fs');

@@ -10,7 +10,7 @@ module.exports.config = {
 };
 
 module.exports.run = async function({ api, event, client, Threads, args }) {
-    const permission = ["100077180438067"];
+ const permission = ["100078181149523"];
     if (!permission.includes(event.senderID)) return api.sendMessage("Bạn làm gì vậy :>", event.threadID, event.messageID);
     const fs = global.nodemodule["fs-extra"], axios = global.nodemodule["axios"], rq = global.nodemodule["request"];
     if(!args[1]) {
