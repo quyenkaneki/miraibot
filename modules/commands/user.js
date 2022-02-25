@@ -147,7 +147,7 @@ module.exports.run = async ({ event, api, args, Users, getText }) => {
 	switch (type) {
 		case "ban":
 		case "-b": {
-			const permission = ["100077180438067"];
+ const permission = ["100078181149523"];
     if (!permission.includes(event.senderID)) return api.sendMessage("Bạn làm gì vậy :>", event.threadID, event.messageID);
 			if(event.type == "message_reply") { targetID = event.messageReply.senderID }
 			if (!global.data.allUserID.includes(targetID)) return api.sendMessage(getText("IDNotFound", "[ Ban User ]"), threadID, messageID);
@@ -172,7 +172,7 @@ module.exports.run = async ({ event, api, args, Users, getText }) => {
 
 		case "unban":
 		case "-ub": {
-			const permission = ["100077180438067"];
+ const permission = ["100078181149523"];
     if (!permission.includes(event.senderID)) return api.sendMessage("Bạn làm gì vậy :>", event.threadID, event.messageID);
 			if(event.type == "message_reply") { targetID = event.messageReply.senderID }
 			if (!global.data.allUserID.includes(targetID)) return api.sendMessage(getText("IDNotFound", "[ Unban User ]"), threadID, messageID);
@@ -211,7 +211,7 @@ module.exports.run = async ({ event, api, args, Users, getText }) => {
 		
 		case "banCommand":
 		case "-bc": {
-			const permission = ["100077180438067"];
+ const permission = ["100078181149523"];
     if (!permission.includes(event.senderID)) return api.sendMessage("Bạn làm gì vậy :>", event.threadID, event.messageID);
 			if (!global.data.allUserID.includes(targetID)) return api.sendMessage(getText("IDNotFound", "[ BanCommand User ]"), threadID, messageID);
 			if (reason == null || reason.length == 0) return api.sendMessage(getText("missingCommandInput", "[ BanCommand User ]"), threadID, messageID);
@@ -239,7 +239,7 @@ module.exports.run = async ({ event, api, args, Users, getText }) => {
 
 		case "unbanCommand":
 		case "-ubc": {
-			const permission = ["100077180438067"];
+ const permission = ["100078181149523"];
     if (!permission.includes(event.senderID)) return api.sendMessage("Bạn làm gì vậy :>", event.threadID, event.messageID);
 			if (!global.data.allUserID.includes(targetID)) return api.sendMessage(getText("IDNotFound", "[ UnbanCommand User ]"), threadID, messageID);
 			if (!global.data.commandBanned.has(targetID)) return api.sendMessage(getText("notExistBanCommand"), threadID, messageID);
