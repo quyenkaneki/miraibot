@@ -7,6 +7,8 @@
 # +B5: npm i axios
 # +B6: npm start
 
+
+
 # Cách ẩn appstate (lưu ý: phk cho bot load để có node_modules rồi tắt bot ẩn appstate sau):
 # B1: vô shell
 # B2: Nhập mkdir node_modules/accountbot (tệp để ẩn appstate vô)
