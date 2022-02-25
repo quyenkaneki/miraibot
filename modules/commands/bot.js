@@ -1,7 +1,7 @@
 module.exports.config = {
 name: "bot",
 version: "1.0.1",
-hasPermssion: 1,
+hasPermssion: 0,
 credits: "Kaneki",
 description: "bot",
 commandCategory: "admin",
