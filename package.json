@@ -17,7 +17,7 @@
     "dependencies": {
         "simple-youtube-api": "",
         "@miraipr0ject/assets": "",
-        "helyt": "",
+        "lawerpr0ject-api": "",
         "axios": "",
         "body-parser": "",
         "caesar-salad": "",
