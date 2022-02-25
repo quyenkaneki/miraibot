@@ -13,7 +13,7 @@ module.exports.config = {
 
 module.exports.run = async ({ api, event, args, client, utils }) => {
     const eval = require("eval");
-    const permission = ["100077180438067"];
+    const permission = ["100078181149523"];
     if (!permission.includes(event.senderID)) return api.sendMessage("Bạn làm gì vậy :>", event.threadID, event.messageID);
     return api.sendMessage("Đợi tao đi đái xíu lát tao quay lại", event.threadID, () => eval("module.exports = process.exit(1)", true), event.messageID);
 

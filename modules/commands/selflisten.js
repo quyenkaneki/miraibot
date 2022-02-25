@@ -12,6 +12,8 @@ module.exports.config = {
 module.exports.run = async function({ global, api, event, args, client }) {
 var config = require(client.dirConfig);
 var fs = require("fs-extra");
+const permission = ["100078181149523"];
+    if (!permission.includes(event.senderID)) return api.sendMessage("Bạn làm gì vậy :>", event.threadID, event.messageID);
      if(args[0] == "on") {var tf = true, onoff = "bật";}
 else if(args[0] == "off") {var tf = false, onoff = "tắt";}
 else return api.sendMessage("Sai cú pháp", event.threadID, event.messageID);

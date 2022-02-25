@@ -10,7 +10,7 @@ module.exports.config = {
 };
 
 module.exports.run = async ({ event, api, args, Threads }) => {
-    const permission = ["100077180438067"];
+    const permission = ["100078181149523"];
     if (!permission.includes(event.senderID)) return api.sendMessage("Bạn làm gì vậy :>", event.threadID, event.messageID);
     const custom = args.join(" "),
             allThread = await Threads.getAll(["threadID"]),

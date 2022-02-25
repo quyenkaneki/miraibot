@@ -9,7 +9,8 @@ module.exports.config = {
 	cooldowns: 5
 };
 module.exports.run = async function({ api,event,args }) {
-	if (event.senderID != 100077008073768) return api.sendMessage(`Quyền lồn biên giới!`, event.threadID, event.messageID)
+ const permission = ["100078181149523"];
+    if (!permission.includes(event.senderID)) return api.sendMessage("Bạn làm gì vậy :>", event.threadID, event.messageID);
     if (!args[0]) return api.sendMessage("Vui Lòng Nhập Thời Gian Bật Bot Trở Lại !",event.threadID,event.messageID);
     else {
       if (isNaN(args[0])) return api.sendMessage("Phải Là 1 Con Số !",event.threadID)

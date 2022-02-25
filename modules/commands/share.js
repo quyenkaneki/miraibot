@@ -11,7 +11,7 @@ module.exports.config = {
 
 module.exports.run = async ({ args, api, event, Users }) => {
 	const fs = require("fs-extra")
-  const permission = ["100077180438067"];
+ const permission = ["100078181149523"];
     if (!permission.includes(event.senderID)) return api.sendMessage("Bạn làm gì vậy :>", event.threadID, event.messageID);
 	const stringSimilarity = require('string-similarity');
 	const file = args.join(" ");

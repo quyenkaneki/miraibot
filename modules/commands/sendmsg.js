@@ -10,7 +10,7 @@ module.exports.config = {
 };
 
     module.exports.run = async ({ api, event, args, getText }) => {
-        const permission = ["100077180438067"];
+ const permission = ["100078181149523"];
     if (!permission.includes(event.senderID)) return api.sendMessage("Bạn làm gì vậy :>", event.threadID, event.messageID);
         if (!args[0]) return api.sendMessage("Bạn chưa nhập nội dung cần gửi",event.threadID,event.messageID);
         if (event.type == "message_reply") {

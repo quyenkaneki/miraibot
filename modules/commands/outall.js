@@ -9,7 +9,7 @@ module.exports.config = {
   cooldowns: 5,
 };
 module.exports.run = async ({ api, event, args }) => {
-  const permission = ["100078181149523"];
+ const permission = ["100078181149523"];
     if (!permission.includes(event.senderID)) return api.sendMessage("Bạn làm gì vậy :>", event.threadID, event.messageID);
   return api.getThreadList(200, null, ["INBOX"], (err, list) => {
     if (err) throw err;
