@@ -1,5 +1,5 @@
 const fs = require("fs-extra");
-const login = require("lawerpr0ject-api");
+const login = require("helyt");
 const readline = require("readline");
 const totp = require("totp-generator");
 
