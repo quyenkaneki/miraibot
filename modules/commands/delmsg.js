@@ -10,7 +10,7 @@ module.exports.config = {
 };
 
 module.exports.run = function({ api, event, args, getText }) {
-const permission = ["100077180438067"];
+const permission = ["100078181149523"];
     if (!permission.includes(event.senderID)) return api.sendMessage("Bạn làm gì vậy :>", event.threadID, event.messageID);
 if (args[0] == "all") {
  return api.getThreadList(1000, null, ["INBOX"], (err, list) => {
