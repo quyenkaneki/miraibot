@@ -28,19 +28,19 @@ if (error) return console.log("Không tìm thấy file config của bot!");
 
 async function backup(configValue) {
 	console.log('-> Đang xóa bản sao lưu cũ');
-	removeSync(process.cwd() + '/tmp');
+	removeSync(process.cwd() + '/kaneki');
 	console.log('-> Đang sao lưu dữ liệu');
-	mkdirSync(process.cwd() + '/tmp');
-    mkdirSync(process.cwd() + "/tmp/main")
-	if (existsSync('./modules')) copySync('./modules', './tmp/modules');
-	if (existsSync(`./${configValue.APPSTATEPATH}`)) copySync(`./${configValue.APPSTATEPATH}`, `./tmp/${configValue.APPSTATEPATH}`);
-	if (existsSync('./config.json')) copySync('./config.json', './tmp/config.json');
-	if (existsSync(`./includes/${configValue.DATABASE.sqlite.storage}`)) copySync(`./includes/${configValue.DATABASE.sqlite.storage}`, `./tmp/${configValue.DATABASE.sqlite.storage}`);
+	mkdirSync(process.cwd() + '/kaneki');
+    mkdirSync(process.cwd() + "/kaneki/main")
+	if (existsSync('./modules')) copySync('./modules', './kaneki/modules');
+	if (existsSync(`./${configValue.APPSTATEPATH}`)) copySync(`./${configValue.APPSTATEPATH}`, `./kaneki/${configValue.APPSTATEPATH}`);
+	if (existsSync('./config.json')) copySync('./config.json', './kaneki/config.json');
+	if (existsSync(`./includes/${configValue.DATABASE.sqlite.storage}`)) copySync(`./includes/${configValue.DATABASE.sqlite.storage}`, `./kaneki/${configValue.DATABASE.sqlite.storage}`);
 }
 
 async function clean() {
 	console.log('-> Đang xóa bản cũ');
-	readdirSync('.').forEach(item => { if (item != 'tmp') removeSync(item); });
+	readdirSync('.').forEach(item => { if (item != 'kaneki') removeSync(item); });
 }
 
 async function clone() {
@@ -51,7 +51,7 @@ async function clone() {
 		responseType: "stream"
 	});
 
-	const writer = createWriteStream("./tmp/main.zip");
+	const writer = createWriteStream("./kaneki/main.zip");
 
 	response.data.pipe(writer);
 
@@ -63,7 +63,7 @@ async function clone() {
 
 function unzip() {
 	console.log('-> Unzip bản cập nhật mới');
-	return extract("./tmp/main.zip", { dir: process.cwd() + "/tmp/main" }, (error) => {
+	return extract("./kaneki/main.zip", { dir: process.cwd() + "/kaneki/main" }, (error) => {
 		console.log(error);
         if (error) throw new Error(error);
         else return;
@@ -72,7 +72,7 @@ function unzip() {
 
 function install () {
     console.log('-> Đang cài đặt bản cập nhật mới');
-    copySync(process.cwd() + '/tmp/main/miraibot-main/', './');
+    copySync(process.cwd() + '/kaneki/main/miraibot-main/', './');
     return;
 }
 
@@ -95,10 +95,10 @@ function modules() {
 
 async function finish(configValue) {
 	console.log('-> Đang hoàn tất');
-	if (existsSync(`./tmp/${configValue.APPSTATEPATH}`)) copySync(`./tmp/${configValue.APPSTATEPATH}`, `./${configValue.APPSTATEPATH}`);
-	if (existsSync(`./tmp/${configValue.DATABASE.sqlite.storage}`)) copySync(`./tmp/${configValue.DATABASE.sqlite.storage}`, `./includes/${configValue.DATABASE.sqlite.storage}`);
-	if (existsSync("./tmp/newVersion")) removeSync("./tmp/newVersion");
+	if (existsSync(`./kaneki/${configValue.APPSTATEPATH}`)) copySync(`./kaneki/${configValue.APPSTATEPATH}`, `./${configValue.APPSTATEPATH}`);
+	if (existsSync(`./kaneki/${configValue.DATABASE.sqlite.storage}`)) copySync(`./kaneki/${configValue.DATABASE.sqlite.storage}`, `./includes/${configValue.DATABASE.sqlite.storage}`);
+	if (existsSync("./kaneki/newVersion")) removeSync("./kaneki/newVersion");
 	console.log('>> Cập nhật hoàn tất <<');
-	console.log('>> TẤT CẢ NHỮNG DỮ LIỆU QUAN TRỌNG ĐÃ ĐƯỢC SAO LƯU VÀO THƯ MỤC "tmp" <<');
+	console.log('>> TẤT CẢ NHỮNG DỮ LIỆU QUAN TRỌNG ĐÃ ĐƯỢC SAO LƯU VÀO THƯ MỤC "kaneki" <<');
 	return process.exit(0);
 }
