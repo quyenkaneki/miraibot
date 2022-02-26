@@ -7,6 +7,7 @@
 # +B5: npm i axios
 # +B6: npm start
 #
+# Sài replit chạy bot thì xóa sing.js đi vì nó ko cho replit sài
 #
 # Cách ẩn appstate (lưu ý: phk cho bot load để có node_modules rồi tắt bot ẩn appstate sau):
 # B1: vô shell
