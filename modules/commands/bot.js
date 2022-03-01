@@ -7,6 +7,11 @@ description: "bot",
 commandCategory: "admin",
 usages: "test",
 cooldowns: 5,
+dependencies: {
+        "axios": "",
+        "fs-extra": "",
+        "path": ""
+    },
 };
 module.exports.run = async function ({ api, event, args, Users, permssion, getText }) {
 const { threadID, messageID } = event;
