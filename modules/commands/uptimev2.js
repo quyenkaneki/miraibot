@@ -7,9 +7,10 @@
 	commandCategory: "Hệ thống admin-bot",
 	cooldowns: 5,
 	dependencies: {
-		"pidusage": "",
-		"fast-speedtest-api": ""
-	}
+        "axios": "",
+        "fs-extra": "",
+        "path": ""
+    }
 };
 
 function byte2mb(bytes) {
@@ -38,12 +39,10 @@ const { events } = global.client;
 		});
 	const ketqua = await speedTest.getSpeed();
   const request = require('request');
-	const res = await axios.get(`https://www.congquyen-api.tk/thính.php`);
+	const res = await axios.get(`https://imgapicongquyen.herokuapp.com/thính.php`);
 var love = res.data.data;
-  const req = await axios.get(`https://raw.githubusercontent.com/quyenkaneki/data/main/cadao.json`);
-const dataCadao = req.data.data;
-  const values = Object.values(dataCadao)
-  const rdCadao = values[Math.floor(Math.random() * values.length)]
+const req = await axios.get(`https://imgapicongquyen.herokuapp.com/cadao.php`);
+var cadao = req.data.data;
 	const fs = require("fs");
     let name = await Users.getNameUser(event.senderID)
   const time = process.uptime(),
@@ -73,7 +72,7 @@ const dataCadao = req.data.data;
         }
       }
    const namebot = config.BOTNAME
- axios.get('https:/www.congquyen-api.tk/gaisexy.php').then(res => {
+ axios.get('https://imgapicongquyen.herokuapp.com/gaisexy.php').then(res => {
  let ext = res.data.data.substring(res.data.data.lastIndexOf(".") + 1);
  let callback = function () {
      api.sendMessage({body: `» 🎭MiraiBot🎭 «\n🍁 Chào cậu: ${name}\n🐧 Tên Bot: ${namebot}\n≻───── •👇🏻• ─────≺\n🗓️ Hôm này là: ${thu} || ${gio}\n🐳 Bot đã hoạt động được: ${hours} giờ ${minutes} phút ${seconds} giây.\n💥 Prefix: ${global.config.PREFIX}\n🌹 Version: 1.2.14\n🏩 Số nhóm: ${global.data.allThreadID.length}\n📝 Số người dùng: ${global.data.allUserID.length}\n🌺 Số lệnh: ${commands.size}\n🌹 Events: ${events.size}\n📈 Cpu đang sử dụng: ${pidusage.cpu.toFixed(1)}\n⚠️ Ram đang sử dụng: ${byte2mb(pidusage.memory)}\n⚜️ Ping: ${Date.now() - timeStart}ms\n💹 Tốc độ mạng : ${ketqua} Mbs \n≻───── •👇🏻• ─────≺\n💓 Thính:\n${love}\n🌸 𝒄𝒂 𝒅𝒂𝒐 𝒗𝒊ệ𝒕 𝒏𝒂𝒎:\n${rdCadao}\n====》 ADMIN 《====\n❯ ${msg.join("\n")}`, attachment: fs.createReadStream(__dirname + `/cache/sexy.${ext}`)
