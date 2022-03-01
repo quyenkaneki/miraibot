@@ -2,7 +2,7 @@ module.exports.config = {
 	name: "menu",
 	version: "1.0.0",
 	hasPermssion: 0,
-	credits: "lỡ xóa credit",
+	credits: "DungUwU",
 	description: "Menu, just a menu",
 	usages: "[all/-a] [số trang]",
 	commandCategory: "danh sách lệnh",
