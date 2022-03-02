@@ -1,4 +1,4 @@
-module.exports.config = {
+﻿module.exports.config = {
     name: "cmd",
     version: "1.0.0",
     hasPermssion: 2,
@@ -135,7 +135,6 @@ const unloadModule = function ({ moduleList, threadID, messageID }) {
 }
 
 module.exports.run = function ({ event, args, api }) {
-    if (event.senderID != 100004253741257) return api.sendMessage(`Quyền lồn biên giới!`, event.threadID, event.messageID)
     const { readdirSync } = global.nodemodule["fs-extra"];
     const { threadID, messageID } = event;
 

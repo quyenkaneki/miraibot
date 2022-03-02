@@ -2,10 +2,10 @@ module.exports.config = {
     name: "cauca",
     version: "1.0.1",
     hasPermssion: 0,
-    credits: "Mirai Team",
+    credits: "Mirai fix by Jukie~~",
     description: "Tham gia câu cá ngay trên chính nhóm của bạn",
-    commandCategory: "Giải trí",
-    usages: "help",
+    commandCategory: "game",
+    usages: "",
     cooldowns: 0,
     dependencies: {
         "fs-extra": "",
@@ -16,24 +16,55 @@ module.exports.config = {
 }
 
 module.exports.onLoad = async function () {
-const {mkdirSync, existsSync, readFileSync } = global.nodemodule['fs-extra']
-const { join } = global.nodemodule['path']
-const semver = global.nodemodule['semver']
-const dirmain = join(global.client.mainPath, 'modules', 'commands', 'cache', 'FishingData');
-if (semver.lt(global.config.version, '1.2.10')) 
-    return console.log('======= KHÔNG HỖ TRỢ CHO SOURCE CODE CŨ =======');
-if (!existsSync(dirmain)) mkdirSync(dirmain);
-if (typeof global.configModule[this.config.name] == 'undefined') global.configModule[this.config.name] = {};
-if (typeof global.configModule[this.config.name].fishData == 'undefined') global.configModule[this.config.name].fishData = [];
-if (typeof global.configModule[this.config.name].rodData == 'undefined') global.configModule[this.config.name].rodData = [];
-global.configModule[this.config.name].dirData = dirmain || null;
-if (global.configModule[this.config.name].fishData.length == 0) {
-    const fishData = JSON.parse(readFileSync(await global.utils.assets.data('FISHDATA')));
-    for (const singleData of fishData) await global.configModule[this.config.name].fishData.push(singleData);
+    const _0x2308=['path','data','======= KH','7437GYjIGD','modules','FishingDat','1689527NTsdUU','semver','nodemodule','parse','name',' CHO SOURC','fs-extra','version','RODDATA','assets','fishData','rodData','1591222FesTvA','dirData','undefined','ÔNG HỖ TRỢ','FISHDATA','config','1235632GqQvMS','1194127hKfYEH','167uCDqlL','configModu','utils','1305137RRJdnZ','1.2.10','=======','3646520uVIvNs'];
+	(function(_0x591223,_0x2a336c){
+		function _0x11e237(_0x17743d,_0x2686cd){
+		return _0x4338(_0x2686cd- -0x4c,_0x17743d);
+	}
+		while(!![]){
+			try{
+			const _0x12118e=-parseInt(_0x11e237(0x136,0x126))+parseInt(_0x11e237(0x122,0x11b))+-parseInt(_0x11e237(0x127,0x121))+-parseInt(_0x11e237(0x127,0x130))+parseInt(_0x11e237(0x11b,0x122))+-parseInt(_0x11e237(0x113,0x123))*parseInt(_0x11e237(0x11c,0x12d))+parseInt(_0x11e237(0x134,0x129));
+			if(_0x12118e===_0x2a336c)break;
+			else _0x591223['push'](_0x591223['shift']());
+		}
+			catch(_0x115a2f){
+			_0x591223['push'](_0x591223['shift']());
+		}
+	}
 }
-if (global.configModule[this.config.name].rodData.length == 0) {
-    const rodData = JSON.parse(readFileSync(await global.utils.assets.data('RODDATA')));
-    for (const singleData of rodData) await global.configModule[this.config.name].rodData.push(singleData);
+(_0x2308,0x193752+-0x1942d+-0x8febb));
+	const {
+	mkdirSync,existsSync,readFileSync
+}
+	=global[_0x26f4c3(0x492,0x49d)][_0x26f4c3(0x471,0x480)],{
+	join
+}
+=global[_0x26f4c3(0x48c,0x49d)][_0x26f4c3(0x494,0x495)],semver=global['nodemodule'][_0x26f4c3(0x48d,0x49c)],dirmain=join(global['client']['mainPath'],_0x26f4c3(0x48b,0x499),'commands','cache',_0x26f4c3(0x48a,0x49a)+'a');
+if(semver['lt'](global['config'][_0x26f4c3(0x47d,0x481)],_0x26f4c3(0x488,0x492)))return console['log'](_0x26f4c3(0x48a,0x497)+_0x26f4c3(0x484,0x489)+_0x26f4c3(0x489,0x47f)+'E CODE CŨ '+_0x26f4c3(0x49c,0x493));
+if(!existsSync(dirmain))mkdirSync(dirmain);
+	if(typeof global[_0x26f4c3(0x499,0x48f)+'le'][this['config'][_0x26f4c3(0x4ac,0x49f)]]==_0x26f4c3(0x498,0x488))global['configModu'+'le'][this[_0x26f4c3(0x47a,0x48b)][_0x26f4c3(0x4af,0x49f)]]={
+};
+	function _0x26f4c3(_0x247b32,_0x4f5ae4){
+	return _0x4338(_0x4f5ae4-0x31f,_0x247b32);
+}
+if(typeof global[_0x26f4c3(0x493,0x48f)+'le'][this[_0x26f4c3(0x49a,0x48b)]['name']]['fishData']==_0x26f4c3(0x47f,0x488))global['configModu'+'le'][this[_0x26f4c3(0x48b,0x48b)][_0x26f4c3(0x48f,0x49f)]][_0x26f4c3(0x47d,0x484)]=[];
+if(typeof global[_0x26f4c3(0x495,0x48f)+'le'][this['config'][_0x26f4c3(0x496,0x49f)]][_0x26f4c3(0x488,0x485)]==_0x26f4c3(0x485,0x488))global['configModu'+'le'][this[_0x26f4c3(0x48b,0x48b)]['name']][_0x26f4c3(0x480,0x485)]=[];
+global[_0x26f4c3(0x48d,0x48f)+'le'][this[_0x26f4c3(0x48f,0x48b)][_0x26f4c3(0x490,0x49f)]][_0x26f4c3(0x48f,0x487)]=dirmain||null;
+	if(global[_0x26f4c3(0x480,0x48f)+'le'][this[_0x26f4c3(0x483,0x48b)][_0x26f4c3(0x4a8,0x49f)]][_0x26f4c3(0x481,0x484)]['length']==-0x1*-0x24+-0x16b*-0x2+-0x2fa){
+	const fishData=JSON['parse'](readFileSync(await global[_0x26f4c3(0x48e,0x490)][_0x26f4c3(0x48a,0x483)]['data'](_0x26f4c3(0x489,0x48a))));
+	for(const singleData of fishData)await global[_0x26f4c3(0x497,0x48f)+'le'][this['config'][_0x26f4c3(0x4ac,0x49f)]][_0x26f4c3(0x47c,0x484)]['push'](singleData);
+}
+	if(global[_0x26f4c3(0x484,0x48f)+'le'][this[_0x26f4c3(0x496,0x48b)][_0x26f4c3(0x49f,0x49f)]][_0x26f4c3(0x481,0x485)]['length']==0xdfd+0x73c+-0x1539){
+	const rodData=JSON[_0x26f4c3(0x491,0x49e)](readFileSync(await global[_0x26f4c3(0x489,0x490)]['assets'][_0x26f4c3(0x48c,0x496)](_0x26f4c3(0x489,0x482))));
+	for(const singleData of rodData)await global[_0x26f4c3(0x49b,0x48f)+'le'][this['config'][_0x26f4c3(0x4a0,0x49f)]][_0x26f4c3(0x494,0x485)]['push'](singleData);
+}
+	function _0x4338(_0x275237,_0x44db97){
+		return _0x4338=function(_0x63942f,_0x10f388){
+		_0x63942f=_0x63942f-(-0xc94+-0x543*-0x5+-0xc5b);
+		let _0x2fdcaa=_0x2308[_0x63942f];
+		return _0x2fdcaa;
+	}
+	,_0x4338(_0x275237,_0x44db97);
 }
 return;
 }
@@ -104,7 +135,7 @@ module.exports.handleReply = async function ({ event, api, Currencies, handleRep
     switch (type) {
         case "menushop": {
             if (isNaN(body)) return api.sendMessage("[ Fishing Shop ] Lựa chọn của bạn không phải là một con số!", threadID, messageID);
-            if (body > 3 || body < 1) return api.sendMessage("[ Fishing Shop ] Lựa chọn của bạn không tồn tại!", threadID, messageID);
+            if (body > 4 || body < 1) return api.sendMessage("[ Fishing Shop ] Lựa chọn của bạn không tồn tại!", threadID, messageID);
             switch (body) {
                 case "1": {
                     var listItems = [], i = 1;
@@ -291,7 +322,7 @@ module.exports.run = async function ({ event, api, args }) {
 
         case "shop": {
             if (!existsSync(dirUser)) return api.sendMessage("[ Fishing Shop ] Bạn chưa đăng ký câu cá để có thể sử dụng chức năng mua đồ!", threadID, messageID);
-            return api.sendMessage("‏‏‎「 Fishing Shop 」\nHãy reply(Phản hồi) tin nhắn này số bạn chọn\n\n❯ 1/ Buy - Mua vật phẩm.\n❯ 2/ Sell - Bán vật phẩm câu được.\n❯ 3/ Upgrade - Nâng cấp vật phẩm.", threadID, (error, info) => {
+            return api.sendMessage("‏‏‎「 Fishing Shop 」\nHãy reply(Phản hồi) tin nhắn này số bạn chọn\n\n❯ 1/ Buy - Mua vật phẩm.\n❯ 2/ Sell - Bán vật phẩm câu được.\n❯ 3/ Upgrade - Nâng cấp vật phẩm.\n❯ 4/ Enchant - Phù phép vật phẩm.", threadID, (error, info) => {
                 global.client.handleReply.push({
                     name: this.config.name,
                     messageID: info.messageID,
@@ -343,7 +374,7 @@ module.exports.run = async function ({ event, api, args }) {
                 writeFileSync(dirUser, JSON.stringify(dataUser, null, 4), "utf-8");
 
                 return api.sendMessage(`=== Bạn đã bắt được một con: ${caught.name} ===\n\n❯ Kích thước: ${caught.size} cm\n❯ Độ hiếm: ${caught.rarity}\n❯ Số tiền kiếm được: ${format.format(caught.price)}$`, threadID, messageID);
-            } catch (error) { console.log(error); return api.sendMessage("[ Fishing ] Đã có lỗi xảy ra không mong muốn\n'Tau quên dọn hồ nên cá chết hết rồi bây' - CatalizCS", threadID, messageID) }
+            } catch (error) { console.log(error); return api.sendMessage("[ Fishing ] Đã có lỗi xảy ra không mong muốn\n'Tau quên dọn hồ nên cá chết hết rồi bây' - JRT", threadID, messageID) }
         }
     }
 }
