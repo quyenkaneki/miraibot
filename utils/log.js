@@ -17,13 +17,13 @@ module.exports = (data, option) => {
 module.exports.loader = (data, option) => {
 	switch (option) {
 		case "warn":
-			console.log(chalk.bold.hex("#FFFF00")('» •KANEKI• « ') + data);
+			console.log(chalk.bold.hex("#FFFF00")('» •CDAT• « ') + data);
 			break;
 		case "error":
-			console.log(chalk.bold.hex("#FF0000")('» •KANEKI• « ') + data);
+			console.log(chalk.bold.hex("#FF0000")('» •CDAT• « ') + data);
 			break;
 		default:
-			console.log(chalk.bold.hex("#00FFFF")('» •KANEKI• « ') + data);
+			console.log(chalk.bold.hex("#00FFFF")('» •CDAT• « ') + data);
 			break;
 	}
 }
