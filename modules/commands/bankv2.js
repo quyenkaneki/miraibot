@@ -1,5 +1,5 @@
 module.exports.config = {
-    name: "bank",
+    name: "bankv2",
     version: "2.0.5",
     hasPermssion: 0,
     credits: "MintDaL",
