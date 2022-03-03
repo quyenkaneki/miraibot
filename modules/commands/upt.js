@@ -2,7 +2,7 @@ module.exports.config = {
 name: "upt",
 version: "1.0.1",
 hasPermssion: 1,
-credits: "Mirai-Kaneki",
+credits: "Mirai team mod by kaneki",
 description: "bot",
 commandCategory: "admin",
 usages: "test",
