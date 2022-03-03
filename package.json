@@ -1,5 +1,5 @@
 {
-    "name": "MiraiBypassKaneki",
+    "name": "MiraiBypassChungDat",
     "version": "1.2.14",
     "description": "A simple Facebook Messenger Bot made by me(CatalizCS) and my brother SpermLord.",
     "main": "mirai.js",
@@ -10,9 +10,9 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/quyenkaneki/miraibot"
+        "url": "git+https://github.com/be-bok/miraibot"
     },
-    "author": "Kaneki",
+    "author": "Cdat",
     "license": "GPL-3.0",
     "dependencies": {
         "simple-youtube-api": "",
