@@ -17,4 +17,4 @@
 # B4: vô config.js thay đầu nhận appstate.json thành node_modules/accountbot/appstate.json
 #
 #
-# Có gì không hiểu ib zalo: 0969733109
+# Có gì không hiểu ib zalo: 0936975434
