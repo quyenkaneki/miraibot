@@ -25,6 +25,7 @@
         "cheerio": "^1.0.0-rc.10",
         "child_process": "^1.0.2",
         "crypto": "^1.0.1",
+        "emoji-unicode": "^2.0.1",
         "eval": "^0.1.6",
         "extract-zip": "^2.0.1",
         "fast-speedtest-api": "^0.3.2",
