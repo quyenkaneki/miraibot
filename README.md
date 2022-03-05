@@ -7,6 +7,7 @@
 # +B5: npm i emoji-unicode (này để hỗ trợ module emojimix (ghép icon))
 # +B6: npm i axios
 # +B7: npm start
+# (Các bạn cx có thể vô package.json file bot dùng npm i các package một)
 #
 # Sài replit chạy bot thì xóa sing.js đi vì nó ko cho replit sài
 #
