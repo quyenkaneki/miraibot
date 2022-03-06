@@ -1,5 +1,5 @@
 module.exports.config = {
-    name: "afkk",
+    name: "afk",
     version: "1.0.0",
     hasPermssion: 0,
     credits: "D-Jukie",
