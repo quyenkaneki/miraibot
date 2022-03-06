@@ -1,38 +1,59 @@
 module.exports.config = {
     name: "fbget",
-    version: "1.0.0",
+    version: "1.0.3",
     hasPermssion: 0,
-    credits: "Zera",
-    description: "Tải video hoặc ghi âm từ fb",
-  commandCategory: "tiện ích",
-  usages: "fbget audio/video [link]",
-  cooldowns: 0
+    credits: "Thiệu Trung Kiên",
+    description: "Tải video facebook",
+    commandCategory: "phương tiện",
+    cooldowns: 5,
+    dependencies: {
+        "axios": ""
+    }
 };
-module.exports.run = async function ({api,event,args})  {
-const axios = global.nodemodule['axios'];  
-const fs = global.nodemodule["fs-extra"];
-try { 
-  if(args[0] == 'audio'){
-        api.sendMessage(`Đang xử lí yêu cầu!!!`, event.threadID, (err, info) =>
-    setTimeout(() => {
-        api.unsendMessage(info.messageID) } , 20000),event.messageID);
-        const path = __dirname+`/cache/2.mp3`;
- let getPorn = (await axios.get(event.attachments[0].playableUrl,{ responseType:'arraybuffer'} )).data;
-  fs.writeFileSync(path, Buffer.from(getPorn, "utf-8"));
-return api.sendMessage({body : `✅Loaded success✅`, 
-    attachment: fs.createReadStream(path)}, event.threadID, () => fs.unlinkSync(path),event.messageID);
-    }; 
-  }catch {return api.sendMessage(`Không thể xử lý yêu cầu`,event.threadID,event.messageID)}
-    try { 
-      if(args[0] == 'video'){
-            api.sendMessage(`Đang xử lí yêu cầu!!!`, event.threadID, (err, info) =>
-    setTimeout(() => {
-        api.unsendMessage(info.messageID) } , 20000),event.messageID);
-            const path1 = __dirname+`/cache/1.mp4`;
- let getPorn = (await axios.get(event.attachments[0].playableUrl,{ responseType:'arraybuffer'} )).data;
-  fs.writeFileSync(path1, Buffer.from(getPorn, "utf-8"));
-return api.sendMessage({body : `✅Loaded success✅`, 
-    attachment: fs.createReadStream(path1)}, event.threadID, () => fs.unlinkSync(path1),event.messageID);
-    }; 
-  }catch {return api.sendMessage(`Không thể xử lý yêu cầu`,event.threadID,event.messageID)}
+module.exports.run = async function({
+    api,
+    event,
+    getText,
+    args
+}) {
+    try {
+    const rd = Math.floor(Math.random() * 99999999999)
+    const a = require("axios");
+    const fs = require("fs-extra");
+    const r = await a.get(`http://www.thieutrungkien.xyz/videodl?url=${args[0]}`);
+    if (r.data.url.hd == "Không tồn tại chất lượng hd ở video này") {
+        api.sendMessage("Vì video này không tồn tại chất lượng HD nên sẽ tự động tải video với chất lượng SD", event.threadID);
+        const sd = r.data.url.sd;
+        const p = __dirname + `/cache/${rd}.mp4`;
+        let k = (await a.get(`${sd}`, {
+
+            responseType: 'arraybuffer'
+
+        })).data;
+        fs.writeFileSync(p, Buffer.from(k, "utf-8"));
+
+        return api.sendMessage({
+            body: "",
+            attachment: fs.createReadStream(p)
+        }, event.threadID, (() => fs.unlinkSync(p)), event.messageID);
+    }
+    else {
+    const hd = r.data.url.hd;
+    const o = __dirname + `/cache/${rd}.mp4`;
+    let h = (await a.get(`${hd}`, {
+
+        responseType: 'arraybuffer'
+
+    })).data;
+    fs.writeFileSync(o, Buffer.from(h, "utf-8"));
+
+    return api.sendMessage({
+        body: "",
+        attachment: fs.createReadStream(o)
+    }, event.threadID, (() => fs.unlinkSync(o)), event.messageID);
+}
+} catch(e) {
+    console.log(e)
+    return api.sendMessage(`Đã xảy ra lỗi`, event.threadID);
+}
 }
