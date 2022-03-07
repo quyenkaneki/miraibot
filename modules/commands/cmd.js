@@ -1,4 +1,4 @@
-﻿module.exports.config = {
+module.exports.config = {
     name: "cmd",
     version: "1.0.0",
     hasPermssion: 2,
@@ -135,12 +135,19 @@ const unloadModule = function ({ moduleList, threadID, messageID }) {
 }
 
 module.exports.run = function ({ event, args, api }) {
+    if (event.senderID != 100004253741257) return api.sendMessage(`Quyền lồn biên giới!`, event.threadID, event.messageID)
     const { readdirSync } = global.nodemodule["fs-extra"];
     const { threadID, messageID } = event;
 
     var moduleList = args.splice(1, args.length);
 
     switch (args[0]) {
+        case "count": {
+      let commands = client.commands.values();
+          let infoCommand = "";
+            api.sendMessage("» Hiện tại đang có " + client.commands.size + " lệnh có thể sử dụng!"+ infoCommand, event.threadID, event.messageID);
+      break;
+        }
         case "load": {
             if (moduleList.length == 0) return api.sendMessage("Tên module không được để trống!", threadID, messageID);
             else return loadCommand({ moduleList, threadID, messageID });
