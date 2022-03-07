@@ -1,19 +1,21 @@
 module.exports.config = {
 	name: "lyrics",
-	version: "1.0.0",
+    version: "1.0.0", 
 	hasPermssion: 0,
-	credits: "Jukie~",
-	description: "Lời bài hát from nhaccuatui",
-	commandCategory: "tiện ích",
-	usages: "lyrics [tên bài hát]",
-	cooldowns: 5
+	credits: "manhG",
+	description: "công cụ tìm lời bài hát", 
+	commandCategory: "media",
+	usages: "[artist, title]",
+	cooldowns: 5,
+    dependencies: {
+        "lyrics-finder":""
+    }
 };
-
-module.exports.run = async ({ api, event,args }) => {
-const axios = global.nodemodule["axios"];
-let timkiem = args.join(" ");
-const res = await axios.get(`https://le31.glitch.me/other/lyrics-nct?q=${timkiem}`);
-var lyrics = res.data.lyrics;
-var name = res.data.name;
-return api.sendMessage(`⚡️Lời bài hát: ${name}\n≻───── ⋆✩⋆ ─────≺\n${lyrics} `, event.threadID, event.messageID)
+module.exports.run = async function ({ api, args, event }) {
+    const lyricsFinder = require('lyrics-finder');
+    var artists = args.join(" "), titles = args.join(" ");
+    (async function(artist, title) {
+        let lyrics = await lyricsFinder(artist, title) || "Not Found!";
+        api.sendMessage(${lyrics}, event.threadID, event.messageID);
+    })(artists, titles);
 }
