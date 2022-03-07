@@ -38,6 +38,7 @@
         "helyt": "^1.3.16",
         "https": "^1.0.0",
         "jimp": "^0.16.1",
+        "lyrics-finder": "^21.7.0",
         "meewmeewapi": "^1.0.4",
         "minimist": "^1.2.5",
         "moment-timezone": "^0.5.34",
