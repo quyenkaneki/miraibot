@@ -9,6 +9,8 @@
 # +B7: npm start
 # (Các bạn cx có thể vô package.json file bot dùng npm i các package một)
 #
+# Các modules nào không cho các bạn sài thì các bạn vô lệnh đó thay uid các bạn vô
+#
 # Sài replit chạy bot thì xóa sing.js đi vì nó ko cho replit sài
 #
 # Có gì không hiểu ib zalo: 0969733109
