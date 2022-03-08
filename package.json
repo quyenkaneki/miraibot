@@ -21,7 +21,7 @@
         "body-parser": "^1.19.2",
         "caesar-salad": "^2.1.0",
         "canvas": "^2.9.0",
-        "chalk": "^4.1.2",
+        "chalk": "^5.0.0",
         "cheerio": "^1.0.0-rc.10",
         "child_process": "^1.0.2",
         "crypto": "^1.0.1",
