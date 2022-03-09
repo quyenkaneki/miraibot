@@ -119,8 +119,8 @@ module.exports.handleEvent = async ({
 		D = u[Math.floor(Math.random() * u.length)],
         //Đưỡng dẫn ảnh, mp3, video, gif nhé
 		I = [ 
-      i.createReadStream(__dirname + `/cache/CHUIBOT/chuithe1.jpg`),
-        i.createReadStream(__dirname + `/cache/CHUIBOT/chuithe2.jpg`),
+      i.createReadStream(__dirname + `/cache/CHUIBOT/chuithe1.gif`),
+        i.createReadStream(__dirname + `/cache/CHUIBOT/chuithe2.gif`),
         i.createReadStream(__dirname + `/cache/CHUIBOT/chuithe3.gif`)
         //i.createReadStream(__dirname + `/cache/CHUIBOT/chuithe.mp4`),
         //i.createReadStream(__dirname + `/cache/CHUIBOT/domixi.mp3`)
