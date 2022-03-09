@@ -7,7 +7,7 @@ module.exports.config = {
     commandCategory: "noprefix",
     cooldowns: 3
 };
-module.exports.run = async ({ api, event, args, Users }) => {
+module.exports.run = async ({ api, event, args, Users, Threads }) => {
   const { threadID, messageID } = event;
   let name = await Users.getNameUser(event.senderID);
     const axios = require('axios');
@@ -21,10 +21,14 @@ module.exports.run = async ({ api, event, args, Users }) => {
     var thang = moment.tz("Asia/Ho_Chi_Minh").format("MM");    
     var nam = moment.tz("Asia/Ho_Chi_Minh").format("YYYY");
     const res = await axios.get(`https://apikanekiflop.tk/hearing`);
+  var poem = res.data.data;
+  const req = await axios.get(`https://apikanekiflop.tk/cadao`);
+  var cadao = req.data.data;
+  var hi = ["Admin bot rất đẹp trai","Admin đang kiếm người yêu","Bạn sẽ bị ban nếu spam bot"];
+  var know = hi[Math.floor(Math.random() * hi.length)];
     var ngay = moment.tz("Asia/Ho_Chi_Minh").format("D");
     var thang = moment.tz("Asia/Ho_Chi_Minh").format("MM");
     var nam = moment.tz("Asia/Ho_Chi_Minh").format("YYYY");
-    var poem = res.data.data
     var d = new Date();
     var day = d.getDay()
 if (day == 0) var day = "Chủ nhật"
@@ -38,10 +42,9 @@ else if (day == 7) var day = "Chủ nhật"
 else return console.log(day)
     axios.get('https://apikanekiflop.tk/gaisexy').then(res => {
     let ext = res.data.data.substring(res.data.data.lastIndexOf(".") + 1);
-    let hi = res.data.cadao.substring(res.data.cadao.lastIndexOf(".") + 1);
     let callback = function () {
                     api.sendMessage({
-body: `Chào ${name},Hôm nay là ${day}\nNgày : ${ngay} Tháng ${thang} Năm ${nam}!\nBây giờ là: ${gio} giờ ${phut} phút ${giay} giây\n💬Thính: ${poem}\n💟Ca dao: ${hi}`,
+body: `Chào ${name},Hôm nay là ${day}\nNgày : ${ngay} Tháng ${thang} Năm ${nam}!\nBây giờ là: ${gio} giờ ${phut} phút ${giay} giây\n💬Thính: ${poem}\n💟Ca dao: ${cadao}\n●──────────────────────\n『Bạn có biết』: ${know}`,
 attachment: fs.createReadStream(__dirname + `/cache/anh.${ext}`)
 }, event.threadID, () => fs.unlinkSync(__dirname + `/cache/anh.${ext}`), event.messageID);
 };
