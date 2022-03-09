@@ -8,6 +8,7 @@ commandCategory: "admin",
 usages: "test",
 cooldowns: 5,
 dependencies: {
+    "pidusage": "",
     "fast-speedtest-api": ""
     }
 };
