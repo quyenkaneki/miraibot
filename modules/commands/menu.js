@@ -75,7 +75,7 @@ module.exports.run = function({ api, event, args }) {
 		group.forEach(commandGroup => {
 			commandGroup.cmds.forEach(item => all_commands.push(item));
 		});
-		let page_num_total = Math.ceil(all_commands.length / 100);
+		let page_num_total = Math.ceil(all_commands.length / 50);
 		if (args[1]) {
 			check = false;
 			page_num_input = parseInt(args[1]);
@@ -84,9 +84,9 @@ module.exports.run = function({ api, event, args }) {
 			else check = true;
 		}
 		if (check) {
-			index_start = (page_num_input) ? (page_num_input * 100) - 10 : 0;
+			index_start = (page_num_input) ? (page_num_input * 50) - 50 : 0;
 			bonus = index_start;
-			index_end = (index_start + 100 > all_commands.length) ? all_commands.length : index_start + 100;
+			index_end = (index_start + 50 > all_commands.length) ? all_commands.length : index_start + 50;
 			all_commands = all_commands.slice(index_start, index_end);
 			all_commands.forEach(e => {
 				msg += `\n${index_start+=1}. ${e}: ${commands.get(e).config.description}`;
@@ -108,7 +108,7 @@ module.exports.run = function({ api, event, args }) {
 		}, messageID)
 	}
 
-	let page_num_total = Math.ceil(group.length / 100);
+	let page_num_total = Math.ceil(group.length / 50);
 	if (args[0]) {
 		check = false;
 		page_num_input = parseInt(args[0]);
@@ -117,9 +117,9 @@ module.exports.run = function({ api, event, args }) {
 		else check = true;
 	}
 	if (check) {
-		index_start = (page_num_input) ? (page_num_input * 100) - 10 : 0;
+		index_start = (page_num_input) ? (page_num_input * 50) - 50 : 0;
 		bonus = index_start;
-		index_end = (index_start + 100 > group.length) ? group.length : index_start + 100;
+		index_end = (index_start + 50 > group.length) ? group.length : index_start + 50;
 		console.log(page_num_input)
 		console.log(index_start)
 		console.log(index_end)
