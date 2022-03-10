@@ -72,7 +72,7 @@ var time= moment.tz("Asia/Ho_Chi_Minh").format("DD/MM/YYYY || HH:mm:s");
     var randomColor2 = Math.floor(Math.random()*13245769).toString(16);
     var randomColor3 = Math.floor(Math.random()*13333333).toString(16);
     const name = await Users.getNameUser(event.senderID)
-    return console.log(chalk.hex("#" + randomColor)(`${threadName} `) + chalk.hex("#" + randomColor)(`|`) +chalk.hex("#" + randomColor1) (` ${name} `) + chalk.hex("#" + randomColor)(`|`) + chalk.hex("#" + randomColor2)(` ${msg} `) + chalk.hex("#" + randomColor) (`|`) + chalk.hex("#" + randomColor3)(`\n${textt} ${time}`) );
+    return console.log(chalk.hex("#FFFF00")(`KANEKI`) + chalk.hex("#" + randomColor)(` || `) +  chalk.hex("#" + randomColor)(`${threadName} `) + chalk.hex("#" + randomColor)(` || `) +chalk.hex("#" + randomColor1) (` ${name} `) + chalk.hex("#" + randomColor)(` || `) + chalk.hex("#" + randomColor2)(` ${msg} `) + chalk.hex("#" + randomColor) (` || `) + chalk.hex("#" + randomColor3)(`\n${textt} ${time}`) );
 }
 }
 module.exports.run = async ({
