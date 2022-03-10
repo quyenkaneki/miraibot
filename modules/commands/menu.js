@@ -91,7 +91,7 @@ module.exports.run = function({ api, event, args }) {
 			all_commands.forEach(e => {
 				msg += `\n${index_start+=1}. ${e}: ${commands.get(e).config.description}`;
 			})
-			msg += `\n\n+ Page(${page_num_input || 1}/${page_num_total})`;
+			msg += `\n\nHiện tại đang có ${commands.size} lệnh có thể sử dụng\n+ Page(${page_num_input || 1}/${page_num_total})`;
 			msg += `\n+ Để xem các trang khác, dùng: ${prefix}menu [all/-a] [số trang]`;
 			msg += "\n+ Reply tin nhắn theo số để xem thông tin chi tiết lệnh";
 		}
@@ -125,7 +125,7 @@ module.exports.run = function({ api, event, args }) {
 		console.log(index_end)
 		group = group.slice(index_start, index_end);
 		group.forEach(commandGroup => msg += `\n${index_start+=1} -➣${commandGroup.group.toUpperCase()}`);
-		msg += `\n\n+ Page(${page_num_input || 1}/${page_num_total})`;
+		msg += `\n\nHiện tại đang có ${commands.size} lệnh có thể sử dụng\n+ Page(${page_num_input || 1}/${page_num_total})`;
 		msg += `\n+ Để xem các trang khác, dùng: ${prefix}menu [số trang]`;
 		msg += `\n+ Reply tin nhắn theo số để xem các lệnh theo phân loại`;
 	}
