@@ -64,14 +64,14 @@ catch {
         configValue = JSON.parse(configValue);
         logger.loader(`Found: ${global.client.configPath.replace(/\.json/g,"") + ".temp"}`);
     }
-    else return logger.loader("config.json not found!", "error");
+    else logger.loader("config.json not found!", "error");
 }
 
 try {
     for (const key in configValue) global.config[key] = configValue[key];
     logger.loader("Config Loaded!");
 }
-catch { return logger.loader("Can't load file config!", "error") }
+catch { logger.loader("Can't load file config!", "error") }
 
 const { Sequelize, sequelize } = require("./includes/database");
 
@@ -110,7 +110,7 @@ try {
     var appState = require(appStateFile);
     logger.loader(global.getText("mirai", "foundPathAppstate"))
 }
-catch { return logger.loader(global.getText("mirai", "notFoundPathAppstate"), "error") }
+catch { logger.loader(global.getText("mirai", "notFoundPathAppstate"), "error") }
 
 ////////////////////////////////////////////////////////////
 //========= Login account and start Listen Event =========//
