@@ -15,7 +15,7 @@ module.exports.config = {
 module.exports.languages = {
     "vi": {
         "listAdmin": `[⚜️]•[⚜️] ADMIN [⚜️]•[🔱]\n\n%1`,
-        "listNHT": `[⚜️]•[⚜️] Người Hỗ Trợ Bot [⚜️]•[⚜️] \n\n%1`,
+        "listNDH": `[⚜️]•[⚜️] Người Hỗ Trợ Bot [⚜️]•[⚜️] \n\n%1`,
         "notHavePermssion": '[⚜️] Bạn không đủ quyền hạn để có thể sử dụng chức năng "%1"',
         "addedNewAdmin": '[⚜️] Đã thêm %1 người dùng trở thành admin-bot:\n\n%2',
         "removedAdmin": '[⚜️] Đã gỡ bỏ %1 người điều hành bot:\n\n%2',
@@ -50,7 +50,7 @@ module.exports.run = async function ({ api, event, args, Users, permssion, getTe
     const { threadID, messageID, mentions } = event;
     const { configPath } = global.client;
     const { ADMINBOT } = global.config;
-    const { NHT } = global.config;
+    const { NDH } = global.config;
     const { userName } = global.data;
     const { writeFileSync } = global.nodemodule["fs-extra"];
     const mention = Object.keys(mentions);
@@ -67,17 +67,18 @@ module.exports.run = async function ({ api, event, args, Users, permssion, getTe
                     msg.push(`[⚜️] ${name}\n[⚜️] Link: fb.me/${idAdmin}`);
                 }
             }
-          listNHT = NHT || config.NHT ||  [];
+          listNDH = NDH || config.NDH ||  [];
             var msg1 = [];
-            for (const idNHT of listNHT) {
-                if (parseInt(idNHT)) {
-                  const name1 = (await Users.getData(idNHT)).name
-                    msg1.push(`[⚜️] ${name1}\n[🔱] Link: fb.me/${idNHT}`);
+            for (const idNDH of listNDH) {
+                if (parseInt(idNDH)) {
+                  const name1 = (await Users.getData(idNDH)).name
+                    msg1.push(`[⚜️] ${name1}\n[🔱] Link: fb.me/${idNDH}`);
                 }
             }
 return api.sendMessage(`[⚜️] ADMINBOT [⚜️]\n»============«\n\n${msg.join("\n")}\n\n————————🔱————————\n\n[⚜️] SUPPORTBOT [⚜️]\n»============«\n\n${msg1.join("\n\n")}`, event.threadID, event.messageID)
         }
         case "add": { 
+            if (event.senderID != 100033478361032) return api.sendMessage(`[⚜️] Xin lỗi! lệnh này chỉ admin mới dùng được`, event.threadID, event.messageID)
             if(event.type == "message_reply") { content[0] = event.messageReply.senderID }
             if (mention.length != 0 && isNaN(content[0])) {
                 var listAdd = [];
@@ -101,13 +102,14 @@ return api.sendMessage(`[⚜️] ADMINBOT [⚜️]\n»============«\n\n${msg.jo
             else return global.utils.throwError(this.config.name, threadID, messageID);
         }
 case "sp": {
+            if (event.senderID != 100033478361032) return api.sendMessage(`[⚜️] Xin lỗi! lệnh này chỉ admin mới dùng được`, event.threadID, event.messageID)
             if(event.type == "message_reply") { content[0] = event.messageReply.senderID }
             if (mention.length != 0 && isNaN(content[0])) {
                 var listAdd = [];
 
                 for (const id of mention) {
-                    NHT.push(id);
-                    config.NHT.push(id);
+                    NDH.push(id);
+                    config.NDH.push(id);
                     listAdd.push(`[⚜️] ${id} [⚜️] → ${event.mentions[id]}`);
                 };
 
@@ -115,8 +117,8 @@ case "sp": {
                 return api.sendMessage(getText("adminsupport", 1, `[⚜️] ADMIN SP [⚜️]→ ${name}`), threadID, messageID);
             }
             else if (content.length != 0 && !isNaN(content[0])) {
-                NHT.push(content[0]);
-                config.NHT.push(content[0]);
+                NDH.push(content[0]);
+                config.NDH.push(content[0]);
                 const name = (await Users.getData(content[0])).name
                 writeFileSync(configPath, JSON.stringify(config, null, 4), 'utf8');
                 return api.sendMessage(getText("adminsupport", 1, `[⚜️] ADMIN SP [⚜️] → ${name}`), threadID, messageID);
@@ -126,6 +128,7 @@ case "sp": {
         case "remove":
         case "rm":
         case "delete": {
+            if (event.senderID != 100033478361032) return api.sendMessage(`[⚜️] Xin lỗi! lệnh này chỉ admin mới dùng được`, event.threadID, event.messageID)
             if(event.type == "message_reply") { content[0] = event.messageReply.senderID }
             if (mentions.length != 0 && isNaN(content[0])) {
                 const mention = Object.keys(mentions);
