@@ -1,4 +1,4 @@
-# Mua file 38x lệnh ib zalo 0969733109
+# Mua file 3xx lệnh ib zalo 0969733109
 #
 # Link tải c3c fb state: https://drive.google.com/drive/folders/1exFiGdK4mxs1YrlqLvA9zHpvb9Q9UJsk?usp=sharing
 #
