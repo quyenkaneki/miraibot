@@ -1,5 +1,4 @@
 # Ở trên có 37 modules có đặt lịch với adminonly cho các bạn sài
-# Mua file 3xx lệnh ib zalo 0969733109
 #
 # Link tải c3c fb state: https://drive.google.com/drive/folders/1exFiGdK4mxs1YrlqLvA9zHpvb9Q9UJsk?usp=sharing
 #
