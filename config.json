@@ -12,8 +12,11 @@
     "OTPKEY": "",
     "BOTNAME": "",
     "PREFIX": "!",
+    "NDH": [
+        "USERID1"// thay uid admin bot phụ (người hỗ trợ) vô đây
+    ],
     "ADMINBOT": [
-        "USERID1",
+        "USERID1",//thay uid admin bot vô đây
         "USERID2"
     ],
     "DATABASE": {
