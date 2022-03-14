@@ -13,10 +13,10 @@
     "BOTNAME": "",
     "PREFIX": "!",
     "NDH": [
-        "USERID1"// thay uid admin bot phụ (người hỗ trợ) vô đây
+        "USERID1"
     ],
     "ADMINBOT": [
-        "USERID1",//thay uid admin bot vô đây
+        "USERID1",
         "USERID2"
     ],
     "DATABASE": {
