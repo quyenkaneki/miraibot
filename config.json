@@ -12,9 +12,6 @@
     "OTPKEY": "",
     "BOTNAME": "",
     "PREFIX": "!",
-    "NDH": [
-        "USERID1"
-    ],
     "ADMINBOT": [
         "USERID1",
         "USERID2"
