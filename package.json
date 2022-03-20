@@ -1,6 +1,6 @@
 {
     "name": "MiraiBypassKaneki",
-    "version": "1.2.14",
+    "version": "1.2.15",
     "description": "A simple Facebook Messenger Bot made by me(CatalizCS) and my brother SpermLord.",
     "main": "mirai.js",
     "scripts": {
@@ -15,9 +15,7 @@
     "author": "Kaneki",
     "license": "GPL-3.0",
     "dependencies": {
-        "simple-youtube-api": "",
         "@miraipr0ject/assets": "",
-        "helyt": "",
         "axios": "",
         "body-parser": "",
         "caesar-salad": "",
@@ -26,10 +24,12 @@
         "cheerio": "",
         "child_process": "",
         "crypto": "",
+        "emoji-unicode": "^2.0.1",
         "eval": "",
         "extract-zip": "",
         "figlet": "",
         "fs-extra": "",
+        "helyt": "",
         "jimp": "",
         "minimist": "",
         "moment-timezone": "",
@@ -40,6 +40,7 @@
         "request": "",
         "semver": "",
         "sequelize": "",
+        "simple-youtube-api": "",
         "sqlite3": "",
         "string-similarity": "",
         "totp-generator": ""
