@@ -1,7 +1,7 @@
 {
     "name": "MiraiBypassKaneki",
     "version": "1.2.15",
-    "description": "A simple Facebook Messenger Bot made by me(CatalizCS) and my brother SpermLord.",
+    "description": "Bot Mirai đã được Quyền Kaneki mode source",
     "main": "mirai.js",
     "scripts": {
         "start": "node index",
@@ -19,7 +19,7 @@
         "axios": "",
         "body-parser": "",
         "caesar-salad": "",
-        "canvas": "",
+        "canvas": "^2.9.0",
         "chalk": "^4.1.2",
         "cheerio": "",
         "child_process": "",
@@ -28,21 +28,24 @@
         "eval": "",
         "extract-zip": "",
         "figlet": "",
-        "fs-extra": "",
+        "fs": "0.0.1-security",
+        "fs-extra": "^10.0.1",
         "helyt": "",
         "jimp": "",
         "minimist": "",
         "moment-timezone": "",
         "ms": "",
+        "node": "^14.17.1",
         "npmlog": "",
         "path": "",
         "readline": "",
-        "request": "",
+        "request": "^2.88.2",
         "semver": "",
         "sequelize": "",
         "simple-youtube-api": "",
         "sqlite3": "",
         "string-similarity": "",
-        "totp-generator": ""
+        "totp-generator": "",
+        "ytdl-core": "^4.11.0"
     }
 }
