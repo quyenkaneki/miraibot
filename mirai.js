@@ -1,21 +1,9 @@
 //////////////////////////////////////////////////////
 //========= Require all variable need use =========//
 /////////////////////////////////////////////////////
-const {
-  readdirSync,
-  readFileSync,
-  writeFileSync,
-  existsSync,
-  unlinkSync,
-  rm
-} = require("fs-extra");
-const {
-  join,
-  resolve
-} = require("path");
-const {
-  execSync
-} = require('child_process');
+const {readdirSync,readFileSync,writeFileSync,existsSync,unlinkSync,rm} = require("fs-extra");
+const {join,resolve} = require("path");
+const {execSync} = require('child_process');
 const logger = require("./utils/log.js");
 const login = require("helyt");
 const axios = require("axios");
@@ -48,15 +36,10 @@ global.data = new Object({
 });
 
 global.utils = require("./utils");
-
 global.nodemodule = new Object();
-
 global.config = new Object();
-
 global.configModule = new Object();
-
 global.moduleData = new Array();
-
 global.language = new Object();
 
 //////////////////////////////////////////////////////////
