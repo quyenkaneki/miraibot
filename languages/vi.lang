@@ -20,17 +20,22 @@ mirai.finishLoadModule=Đã tải thành công %1 module commands và %2 module 
 mirai.foundPathAppstate=Đã tìm thấy file appstate
 mirai.notFoundPathAppstate=Không tìm thấy file appstate
 mirai.checkListGban=Đang kiểm tra danh sách global ban...
-mirai.banDevice=Hiện tại thiết bị của bạn đã bị ban khỏi miraiproject, liên hệ tới zalo 0969733109 để biết thêm thông tin chi tiết hoặc xin key unban, nếu bạn đã có key unban hãy điền vào bên dưới!
+mirai.banDevice=Hiện tại thiết bị của bạn đã bị ban khỏi miraiproject, liên hệ tới facebook https://fb.me/catalizcs để biết thêm thông tin chi tiết hoặc xin key unban, nếu bạn đã có key unban hãy điền vào bên dưới!
 mirai.keyNotSameFormat=Dữ liệu bạn nhập phải là một dãy số bao gồm 6 chữ số!
 mirai.codeInputExpired=Code bạn nhập không trùng khớp hoặc đã hết hạn!
 mirai.unbanDeviceSuccess=Thiết bị của bạn đã được gỡ ban, hãy khởi động lại để có thể tiếp tục sử dụng
-mirai.userBanned=Bạn đã bị ban khỏi miraiproject vào lúc %1 với lý do: %2. Liên hệ tới zalo 0969733109 để biết thêm chi tiết!
+mirai.userBanned=Bạn đã bị ban khỏi miraiproject vào lúc %1 với lý do: %2. Liên hệ tới facebook https://fb.me/catalizCS để biết thêm chi tiết!
 mirai.finishCheckListGban=Đã kiểm tra xong danh sách global ban
 mirai.handleListenError=handleListener đã xảy ra một số lỗi không mong muốn, lỗi: %1
 mirai.warningSourceCode=PHÁT HIỆN SOURCE CODE ĐÃ BỊ THAY ĐỔI CẤU TRÚC, HÃY DỪNG LẠI NGAY!
 mirai.refreshListen=Đã làm mới lại handleListener...
 mirai.successConnectDatabase=Kết nối đến cơ sở dữ liệu thành công
 mirai.failConnectDatabase=Kết nối đến cơ sở dữ liệu thất bại, lỗi: %1
+mirai.foundVanillaState=Đã tìm thấy appstate chưa mã hóa
+mirai.processCrypt=Đang tiến hành tự động mã hóa appstate
+mirai.fail2crypt1=Không thể giải mã appstate với khóa được cung cấp, vui lòng kiểm tra KEY trong môi trường và chắc chắn appstate không bị hỏng
+mirai.fail2crypt2=Không thể load appstate raw hoặc KEY bị lỗi
+mirai.cryptSuccess=Mã hóa appstate thành công
 
 # includes/listen.js
 
@@ -39,6 +44,7 @@ listen.loadedEnvironmentThread=Đã tải thành công biến môi trường nh�
 listen.loadedEnvironmentUser=Đã tải thành công biến môi trường người dùng
 listen.successLoadEnvironment=Đã khởi tạo biến môi trường thành công
 listen.failLoadEnvironment=Khởi tạo biến môi trường không thành công, lỗi: %1
+listen.Finalized=Chúc sử dụng bot vui vẻ
 
 # includes/controller/currencies.js
 
