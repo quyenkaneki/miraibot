@@ -7,6 +7,7 @@
     "autoClean": false,
     "commandDisabled": [],
     "eventDisabled": [],
+    "encryptSt": true,
     "EMAIL": "",
     "PASSWORD": "",
     "OTPKEY": "",
