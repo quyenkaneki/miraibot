@@ -1,5 +1,3 @@
-# Link tải c3c fb state: https://drive.google.com/drive/folders/1exFiGdK4mxs1YrlqLvA9zHpvb9Q9UJsk?usp=sharing
-#
 # Miraibot
 # Các bước tạo bot:
 # +B1: npm i
@@ -11,4 +9,5 @@
 # +B7: npm start
 # (Các bạn cx có thể vô package.json file bot dùng npm i các package một)
 #
+# Update thêm login lại đk: điền email, pass vô config và đảm bảo rằng acc phải ngấm ip máy
 # Có gì không hiểu ib zalo: 0969733109
