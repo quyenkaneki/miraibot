@@ -10,4 +10,5 @@
 # (Các bạn cx có thể vô package.json file bot dùng npm i các package một)
 #
 # Update thêm login lại đk: điền email, pass vô config và đảm bảo rằng acc phải ngấm ip máy
+# Có lưu uptime vô config nên ae mò module uptime tìm đoạn process.uptime() đổi thành process.uptime() + global.config.UPTIME
 # Có gì không hiểu ib zalo: 0969733109
