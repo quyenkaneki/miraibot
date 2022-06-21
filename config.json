@@ -1,13 +1,10 @@
 {
     "language": "vi",
-    "URLAPI": "https://api-test.sp20bse.repl.co",
-    "KEYAPI": "KANEKIVIP30062007",
-    "keyActive": "congquyen2k7",
+    "keyActive": "",
     "DeveloperMode": false,
     "autoCreateDB": true,
     "allowInbox": true,
     "autoClean": false,
-    "adminOnly": false,
     "UPTIME": 133388.14049819595,
     "commandDisabled": [],
     "eventDisabled": [],
@@ -17,12 +14,7 @@
     "BOTNAME": "Mirai-Project",
     "PREFIX": "'",
     "ADMINBOT": [
-        "100040984926932",
-        "100076346311876",
-        "100057016878182"
-    ],
-    "NDH": [
-        ""
+        "100040984926932"
     ],
     "DATABASE": {
         "sqlite": {
@@ -38,127 +30,5 @@
         "selfListen": true,
         "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Safari/537.36"
     },
-    "version": "1.3.0",
-    "bank": {
-        "APIKEY": "chinhdz"
-    },
-    "banner": {
-        "APIKEY": "ntkhangGoatBot"
-    },
-    "banner2": {
-        "APIKEY": "ntkhangGoatBot"
-    },
-    "bot": {
-        "APIKEY": "KANEKIFree_4314339408"
-    },
-    "cave": {
-        "cooldownTime": 1000000
-    },
-    "daily": {
-        "cooldownTime": 21600000,
-        "rewardCoin": 10000
-    },
-    "duaxe": {
-        "key": ""
-    },
-    "ghep": {
-        "cooldownTime": 300000
-    },
-    "help": {
-        "autoUnsend": true,
-        "delayUnsend": 60
-    },
-    "ins": {
-        "APIKEY": ""
-    },
-    "loto": {
-        "maxPlayers": 5,
-        "getDelay": 5
-    },
-    "math": {
-        "WOLFRAM": "T8J8YV-H265UQ762K"
-    },
-    "pokemon": {
-        "APIKEY": ""
-    },
-    "sauce": {
-        "SAUCENAO_API": "29be078b8f5239a1202742869f92c25955bdcab3"
-    },
-    "shortlink": {
-        "bitlyAPI": "150ef1bc3af86500796d645c86f56766e4802566"
-    },
-    "sing": {
-        "YOUTUBE_API": "AIzaSyCjp5YPl8C5px85e8lS-dku5x08fKgBpKo"
-    },
-    "sing2": {
-        "YOUTUBE_API": "AIzaSyCKLLk55EafnP___8fMuA0KCaUVW8EPScY",
-        "SOUNDCLOUD_API": "M4TSyS6eV0AcMynXkA3qQASGcOFQTWub"
-    },
-    "sing3": {
-        "YOUTUBE_API": "AIzaSyDEE1-zZSRVI8lTaQOVsIAQFgL-_BJKvhk"
-    },
-    "subnautica": {
-        "APIKEY": ""
-    },
-    "tikvideo": {
-        "APIKEY": "7b9418aaabmshfa7be9ccf6c6daap14adf9jsnd93a9e086fe3"
-    },
-    "video2": {
-        "YOUTUBE_API": "AIzaSyDEE1-zZSRVI8lTaQOVsIAQFgL-_BJKvhk"
-    },
-    "video3": {
-        "ytdl-core": "",
-        "fs-extra": "",
-        "simple-youtube-api": ""
-    },
-    "voice": {
-        "zalo_apikey": "",
-        "fpt_apikey": ""
-    },
-    "xidach": {
-        "maxPlayers": 5,
-        "normalWinBonus": 1,
-        "superWinBonus": 2,
-        "epicWinBonus": 4
-    },
-    "xoso": {
-        "APIKEY": ""
-    },
-    "ytbmp3": {
-        "YOUTUBE_API": "AIzaSyA25_Ne0gD1DeciKIM8PzZBLvQ0MgGRlr0"
-    },
-    "ytbmp4": {
-        "YOUTUBE_API": "AIzaSyCjp5YPl8C5px85e8lS-dku5x08fKgBpKo"
-    },
-    "zwar": {
-        "cooldownTime": 1200000
-    },
-    "adminUpdate": {
-        "autoUnsend": true,
-        "sendNoti": true,
-        "timeToUnsend": 10
-    },
-    "log": {
-        "enable": true
-    },
-    "work": {
-        "cooldownTime": 1200000
-    },
-    "mine": {
-        "APIKEY": ""
-    },
-    "singtest": {
-        "YOUTUBE_API": "AIzaSyDEE1-zZSRVI8lTaQOVsIAQFgL-_BJKvhk"
-    },
-    "menu": {
-        "autoUnsend": true,
-        "delayUnsend": 60
-    },
-    "hunter": {
-        "userToken": "D7tTFhgD",
-        "adminToken": "ZkSy3UsT"
-    },
-    "video": {
-        "YOUTUBE_API": "AIzaSyDEE1-zZSRVI8lTaQOVsIAQFgL-_BJKvhk"
-    }
+    "version": "1.3.0"
 }
