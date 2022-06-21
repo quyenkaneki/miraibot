@@ -113,7 +113,7 @@ function startBot(message) {
 //========= Check update from Github =========//
 ////////////////////////////////////////////////
 
-axios.get('https://pastebin.com/raw/wATGkm1k').then((res) => {
+axios.get('https://raw.githubusercontent.com/quyenkaneki/miraibot/main/package.json').then((res) => {
   const local = JSON.parse(readFileSync('./package.json'))
 if (semver.lt(local.version, res.data.version)) {
   if (local.autoUpdate == true) {
