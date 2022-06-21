@@ -1,13 +1,13 @@
 const { spawn } = require("child_process");
 const { readFileSync } = require("fs-extra");
-/*async function uptime() {
+async function uptime() {
 const { writeFileSync } = require('fs-extra')
 const { join } = require('path'),
   startupt = require('./config.json')
 startupt.UPTIME = 0
 writeFileSync(join('./config.json'),JSON.stringify(startupt, null, 4),'utf-8')
 }
-uptime()*/
+uptime()
 const http = require("http");
 const axios = require("axios");
 const semver = require("semver");
@@ -126,24 +126,6 @@ if (semver.lt(local.version, res.data.version)) {
       logger('Unable to update: ' + JSON.stringify(checkupdate),'[ CHECK UPDATE ]')})
   } else {
     logger('A new update is available! Open terminal/cmd and type "node update" to update!','[ CHECK UPDATE ]')
-    async function bank() {
-      const { readdirSync, readFileSync, writeFileSync, existsSync, copySync } = require('fs-extra');
-      const { join, resolve } = require('path');
-      const pathData = join(__dirname + '/modules/commands/banking/banking.json');
-      const logger = require("./utils/log.js");
-      const user = require('./modules/commands/banking/banking.json');
-      const timeIM = 60*60
-      const laisuat = 2
-        if(user[0] == undefined ) return
-        while(true) {
-        for (let id of user) {
-        var userData = user.find(i => i.senderID == id.senderID);
-        var money = userData.money;
-        userData.money = (parseInt(money + money * laisuat))
-        writeFileSync(pathData, JSON.stringify(user, null, 2))}
-        logger.loader("Đang xử lí...");
-        await new Promise(resolve => setTimeout(resolve, timeIM*1000))}
-      }bank()
   }startBot()
 } else {
   logger('You are using the latest version!', '[ CHECK UPDATE ]');
