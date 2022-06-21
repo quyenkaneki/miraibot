@@ -35,8 +35,3 @@ module.exports.loader = (data, option) => {
 			break;
 	}
 }
-module.exports.banner = (data) => {
-	const rdcl = ['blue', 'yellow', 'green', 'red', 'magenta', 'yellowBright', 'blueBright', 'magentaBright']
-	const color = chalk[rdcl[Math.floor(Math.random() * rdcl.length)]]
-	console.log(color(data));
-}
