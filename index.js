@@ -126,10 +126,12 @@ if (semver.lt(local.version, res.data.version)) {
       logger('Unable to update: ' + JSON.stringify(checkupdate),'[ CHECK UPDATE ]')})
   } else {
     logger('A new update is available! Open terminal/cmd and type "node update" to update!','[ CHECK UPDATE ]')
-  }startBot()
+    startBot()
+  }
 } else {
   logger('You are using the latest version!', '[ CHECK UPDATE ]');
   logger(res['data']['name'], "[ NAME ]");
     logger("Version: " + res['data']['version'], "[ VERSION ]");
     logger(res['data']['description'], "[ DESCRIPTION ]")
+  startBot()
 }}).catch(err => logger("Unable to check update.", "[ CHECK UPDATE ]"));
