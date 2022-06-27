@@ -5,6 +5,7 @@
     "autoCreateDB": true,
     "allowInbox": true,
     "autoClean": false,
+    "encryptSt": true,
     "UPTIME": 0,
     "commandDisabled": [],
     "eventDisabled": [],
